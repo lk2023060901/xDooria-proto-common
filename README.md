@@ -1,0 +1,1 @@
+# xstory-proto-common
