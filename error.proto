@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package common;
+
+option go_package = "github.com/xDooria/xDooria-proto-common;common";
+
+// ErrorCode 错误码结构
+message ErrorCode {
+  // 错误码
+  uint32 err_code = 1;
+
+  // 错误消息
+  string err_msg = 2;
+
+  // 错误原因/详情
+  string reason = 3;
+
+  // 错误发生时间戳
+  uint64 timestamp = 4;
+}

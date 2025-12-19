@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package common;
+
+option go_package = "github.com/xDooria/xDooria-proto-common;common";
+
+// MessageFlags 定义消息标志位枚举
+enum MessageFlags {
+  // 默认值，无特殊标志
+  MESSAGE_FLAGS_NONE = 0;
+
+  // 加密消息
+  MESSAGE_FLAGS_ENCRYPTED = 0x0010;
+
+  // 压缩消息
+  MESSAGE_FLAGS_COMPRESSED = 0x0020;
+}
+
+// MessageHeader 消息头部
+message MessageHeader {
+  // 协议号
+  uint32 op = 1;
+
+  // 消息序列号，用于防重放和幂等性保证
+  uint32 seq_id = 2;
+
+  // 消息体长度
+  uint32 size = 3;
+
+  // 消息标志位
+  uint32 flags = 4;
+
+  // 消息签名，用于防篡改
+  bytes sign = 5;
+
+  // Unix 时间戳
+  uint64 timestamp = 6;
+}
+
+// Envelope 消息信封，包含头部和消息体
+message Envelope {
+  // 消息头部
+  MessageHeader header = 1;
+
+  // 消息体
+  bytes payload = 2;
+}
