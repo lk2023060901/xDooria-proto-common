@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package common;
+
+import "envelope.proto";
+
+option go_package = "github.com/xDooria/xDooria-proto-common;common";
+
+// CommonService 通用服务接口，支持基于 Envelope 的全双工或单请求通信
+service CommonService {
+  // Call 单次请求-响应
+  rpc Call(Envelope) returns (Envelope);
+  
+  // Stream 全双工流
+  rpc Stream(stream Envelope) returns (stream Envelope);
+}
