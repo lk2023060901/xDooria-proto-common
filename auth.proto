@@ -8,16 +8,19 @@ option go_package = "github.com/xDooria/xDooria-proto-common;common";
 enum LoginType {
     // 默认值 (无效)
     LOGIN_TYPE_NONE = 0;
+
+    // 本地测试登录 (xlsx/config)
+    LOGIN_TYPE_LOCAL = 1;
     
     // 内部账号密码登录
-    LOGIN_TYPE_INTERNAL = 1;
+    LOGIN_TYPE_INTERNAL = 2;
     
     // 微信登录
-    LOGIN_TYPE_WECHAT = 2;
+    LOGIN_TYPE_WECHAT = 3;
     
     // QQ 登录
-    LOGIN_TYPE_QQ = 3;
+    LOGIN_TYPE_QQ = 4;
     
     // 游客登录 (基于 DeviceID)
-    LOGIN_TYPE_GUEST = 4;
+    LOGIN_TYPE_GUEST = 5;
 }

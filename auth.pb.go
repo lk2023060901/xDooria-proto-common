@@ -27,31 +27,35 @@ type LoginType int32
 const (
 	// 默认值 (无效)
 	LoginType_LOGIN_TYPE_NONE LoginType = 0
+	// 本地测试登录 (xlsx/config)
+	LoginType_LOGIN_TYPE_LOCAL LoginType = 1
 	// 内部账号密码登录
-	LoginType_LOGIN_TYPE_INTERNAL LoginType = 1
+	LoginType_LOGIN_TYPE_INTERNAL LoginType = 2
 	// 微信登录
-	LoginType_LOGIN_TYPE_WECHAT LoginType = 2
+	LoginType_LOGIN_TYPE_WECHAT LoginType = 3
 	// QQ 登录
-	LoginType_LOGIN_TYPE_QQ LoginType = 3
+	LoginType_LOGIN_TYPE_QQ LoginType = 4
 	// 游客登录 (基于 DeviceID)
-	LoginType_LOGIN_TYPE_GUEST LoginType = 4
+	LoginType_LOGIN_TYPE_GUEST LoginType = 5
 )
 
 // Enum value maps for LoginType.
 var (
 	LoginType_name = map[int32]string{
 		0: "LOGIN_TYPE_NONE",
-		1: "LOGIN_TYPE_INTERNAL",
-		2: "LOGIN_TYPE_WECHAT",
-		3: "LOGIN_TYPE_QQ",
-		4: "LOGIN_TYPE_GUEST",
+		1: "LOGIN_TYPE_LOCAL",
+		2: "LOGIN_TYPE_INTERNAL",
+		3: "LOGIN_TYPE_WECHAT",
+		4: "LOGIN_TYPE_QQ",
+		5: "LOGIN_TYPE_GUEST",
 	}
 	LoginType_value = map[string]int32{
 		"LOGIN_TYPE_NONE":     0,
-		"LOGIN_TYPE_INTERNAL": 1,
-		"LOGIN_TYPE_WECHAT":   2,
-		"LOGIN_TYPE_QQ":       3,
-		"LOGIN_TYPE_GUEST":    4,
+		"LOGIN_TYPE_LOCAL":    1,
+		"LOGIN_TYPE_INTERNAL": 2,
+		"LOGIN_TYPE_WECHAT":   3,
+		"LOGIN_TYPE_QQ":       4,
+		"LOGIN_TYPE_GUEST":    5,
 	}
 )
 
@@ -87,13 +91,14 @@ var File_auth_proto protoreflect.FileDescriptor
 const file_auth_proto_rawDesc = "" +
 	"\n" +
 	"\n" +
-	"auth.proto\x12\x06common*y\n" +
+	"auth.proto\x12\x06common*\x8f\x01\n" +
 	"\tLoginType\x12\x13\n" +
-	"\x0fLOGIN_TYPE_NONE\x10\x00\x12\x17\n" +
-	"\x13LOGIN_TYPE_INTERNAL\x10\x01\x12\x15\n" +
-	"\x11LOGIN_TYPE_WECHAT\x10\x02\x12\x11\n" +
-	"\rLOGIN_TYPE_QQ\x10\x03\x12\x14\n" +
-	"\x10LOGIN_TYPE_GUEST\x10\x04B0Z.github.com/xDooria/xDooria-proto-common;commonb\x06proto3"
+	"\x0fLOGIN_TYPE_NONE\x10\x00\x12\x14\n" +
+	"\x10LOGIN_TYPE_LOCAL\x10\x01\x12\x17\n" +
+	"\x13LOGIN_TYPE_INTERNAL\x10\x02\x12\x15\n" +
+	"\x11LOGIN_TYPE_WECHAT\x10\x03\x12\x11\n" +
+	"\rLOGIN_TYPE_QQ\x10\x04\x12\x14\n" +
+	"\x10LOGIN_TYPE_GUEST\x10\x05B0Z.github.com/xDooria/xDooria-proto-common;commonb\x06proto3"
 
 var (
 	file_auth_proto_rawDescOnce sync.Once
