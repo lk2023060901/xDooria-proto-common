@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package common;
+
+option go_package = "github.com/xDooria/xDooria-proto-common;common";
+
+// OpCode 系统级协议号 (0 - 999)
+enum OpCode {
+    OP_NONE = 0;
+    
+    // 基础连接协议
+    OP_HEARTBEAT = 1;      // 心跳包
+    OP_ERROR_NOTICE = 2;   // 通用错误通知
+    OP_KICK_NOTICE = 3;    // 踢人通知
+    
+    // 预留到 999
+}
