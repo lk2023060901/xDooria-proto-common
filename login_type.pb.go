@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.11
 // 	protoc        v6.33.2
-// source: auth.proto
+// source: login_type.proto
 
 package common
 
@@ -70,11 +70,11 @@ func (x LoginType) String() string {
 }
 
 func (LoginType) Descriptor() protoreflect.EnumDescriptor {
-	return file_auth_proto_enumTypes[0].Descriptor()
+	return file_login_type_proto_enumTypes[0].Descriptor()
 }
 
 func (LoginType) Type() protoreflect.EnumType {
-	return &file_auth_proto_enumTypes[0]
+	return &file_login_type_proto_enumTypes[0]
 }
 
 func (x LoginType) Number() protoreflect.EnumNumber {
@@ -83,15 +83,14 @@ func (x LoginType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use LoginType.Descriptor instead.
 func (LoginType) EnumDescriptor() ([]byte, []int) {
-	return file_auth_proto_rawDescGZIP(), []int{0}
+	return file_login_type_proto_rawDescGZIP(), []int{0}
 }
 
-var File_auth_proto protoreflect.FileDescriptor
+var File_login_type_proto protoreflect.FileDescriptor
 
-const file_auth_proto_rawDesc = "" +
+const file_login_type_proto_rawDesc = "" +
 	"\n" +
-	"\n" +
-	"auth.proto\x12\x06common*\x8f\x01\n" +
+	"\x10login_type.proto\x12\x06common*\x8f\x01\n" +
 	"\tLoginType\x12\x13\n" +
 	"\x0fLOGIN_TYPE_NONE\x10\x00\x12\x14\n" +
 	"\x10LOGIN_TYPE_LOCAL\x10\x01\x12\x17\n" +
@@ -101,22 +100,22 @@ const file_auth_proto_rawDesc = "" +
 	"\x10LOGIN_TYPE_GUEST\x10\x05B5Z3github.com/lk2023060901/xdooria-proto-common;commonb\x06proto3"
 
 var (
-	file_auth_proto_rawDescOnce sync.Once
-	file_auth_proto_rawDescData []byte
+	file_login_type_proto_rawDescOnce sync.Once
+	file_login_type_proto_rawDescData []byte
 )
 
-func file_auth_proto_rawDescGZIP() []byte {
-	file_auth_proto_rawDescOnce.Do(func() {
-		file_auth_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_auth_proto_rawDesc), len(file_auth_proto_rawDesc)))
+func file_login_type_proto_rawDescGZIP() []byte {
+	file_login_type_proto_rawDescOnce.Do(func() {
+		file_login_type_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_login_type_proto_rawDesc), len(file_login_type_proto_rawDesc)))
 	})
-	return file_auth_proto_rawDescData
+	return file_login_type_proto_rawDescData
 }
 
-var file_auth_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_auth_proto_goTypes = []any{
+var file_login_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_login_type_proto_goTypes = []any{
 	(LoginType)(0), // 0: common.LoginType
 }
-var file_auth_proto_depIdxs = []int32{
+var file_login_type_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -124,26 +123,26 @@ var file_auth_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_auth_proto_init() }
-func file_auth_proto_init() {
-	if File_auth_proto != nil {
+func init() { file_login_type_proto_init() }
+func file_login_type_proto_init() {
+	if File_login_type_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_auth_proto_rawDesc), len(file_auth_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_login_type_proto_rawDesc), len(file_login_type_proto_rawDesc)),
 			NumEnums:      1,
 			NumMessages:   0,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_auth_proto_goTypes,
-		DependencyIndexes: file_auth_proto_depIdxs,
-		EnumInfos:         file_auth_proto_enumTypes,
+		GoTypes:           file_login_type_proto_goTypes,
+		DependencyIndexes: file_login_type_proto_depIdxs,
+		EnumInfos:         file_login_type_proto_enumTypes,
 	}.Build()
-	File_auth_proto = out.File
-	file_auth_proto_goTypes = nil
-	file_auth_proto_depIdxs = nil
+	File_login_type_proto = out.File
+	file_login_type_proto_goTypes = nil
+	file_login_type_proto_depIdxs = nil
 }
