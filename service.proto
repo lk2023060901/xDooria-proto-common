@@ -4,7 +4,7 @@ package common;
 
 import "envelope.proto";
 
-option go_package = "github.com/xDooria/xDooria-proto-common;common";
+option go_package = "github.com/lk2023060901/xdooria-proto-common;common";
 
 // CommonService 通用服务接口，支持基于 Envelope 的全双工或单请求通信
 service CommonService {

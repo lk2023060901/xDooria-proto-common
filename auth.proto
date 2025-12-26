@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package common;
 
-option go_package = "github.com/xDooria/xDooria-proto-common;common";
+option go_package = "github.com/lk2023060901/xdooria-proto-common;common";
 
 // LoginType 定义登录/认证类型
 enum LoginType {

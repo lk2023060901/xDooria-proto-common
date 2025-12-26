@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package common;
 
-option go_package = "github.com/xDooria/xDooria-proto-common;common";
+option go_package = "github.com/lk2023060901/xdooria-proto-common;common";
 
 // =============================================================================
 // 框架保留错误码：0-10000

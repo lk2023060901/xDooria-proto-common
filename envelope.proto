@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package common;
 
-option go_package = "github.com/xDooria/xDooria-proto-common;common";
+option go_package = "github.com/lk2023060901/xdooria-proto-common;common";
 
 // MessageFlags 定义消息标志位枚举
 enum MessageFlags {
