@@ -1,3 +1,3 @@
-module github.com/xDooria/xDooria-proto-common
+module github.com/lk2023060901/xdooria-proto-common
 
 go 1.25.4
